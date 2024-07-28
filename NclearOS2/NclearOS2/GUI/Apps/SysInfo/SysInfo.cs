@@ -39,7 +39,7 @@ namespace NclearOS2
         }
         public static string Main()
         {
-            return "OS: " + Kernel.OSVERSION + "\n" + DisplayRes +"\nCPU: " + CPUname + "\nCPU Uptime: " + CPUuptime;
+            return "OS: Luxin, " + Kernel.OSVERSION + "\n" + DisplayRes +"\nCPU: " + CPUname + "\nCPU Uptime: " + CPUuptime;
         }
         public static string Ram()
         {
