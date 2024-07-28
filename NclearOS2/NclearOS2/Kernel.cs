@@ -11,11 +11,11 @@ namespace NclearOS2
 {
     public class Kernel : Sys.Kernel
     {
-        public static readonly string OSVERSION = "NclearOS 2 Version Alpha 0.6";
-        public static readonly string OSNAME = "NclearOS 2";
+        public static readonly string OSVERSION = "Luxin 1 vbmeta";
+        public static readonly string OSNAME = "Luxin 0.1 vbmeta";
         public static string PCNAME = "pc";
         public static readonly string MAINDISK = "0:\\";
-        public static readonly string SYSTEMPATH = MAINDISK + "NclearOS\\";
+        public static readonly string SYSTEMPATH = MAINDISK + "Luxin\\";
         public static readonly string USERSPATH = SYSTEMPATH + "Users\\";
 
         public static readonly string PROGRAMSPATH = SYSTEMPATH + "Programs\\";
@@ -68,7 +68,7 @@ namespace NclearOS2
                 Console.CursorLeft = 35;
                 Console.CursorTop = 11;
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("NclearOS");
+                Console.WriteLine("LUXIN");
                 Console.CursorLeft = 0;
                 Console.CursorTop = Console.WindowHeight - 1;
                 TextMode.Run();
@@ -127,8 +127,8 @@ namespace NclearOS2
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
-            Console.CursorLeft = (Console.WindowWidth - ("Fatal System " + e.ToString()).Length) / 2;
-            Console.Write("Fatal System " + e.ToString());
+            Console.CursorLeft = (Console.WindowWidth - ("ERROR SYS: " + e.ToString()).Length) / 2;
+            Console.Write("ERROR SYS: " + e.ToString());
             Thread.Sleep(500);
             Sys.KeyboardManager.TryReadKey(out _);
             Console.WriteLine();
