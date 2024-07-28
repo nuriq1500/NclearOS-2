@@ -27,7 +27,7 @@ namespace NclearOS2
         {
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.CursorTop = Console.WindowHeight - 1;
-            Console.Write("Hold Shift for advanced options");
+            Console.Write("Hold shift key for advanced options");
             //Console.CursorVisible = true;
             Console.Beep(300, 200);
             Thread.Sleep(50);
@@ -76,9 +76,9 @@ namespace NclearOS2
                 Console.CursorLeft = (Console.WindowWidth - Kernel.OSVERSION.Length + 4) / 2;
                 Console.WriteLine("  " + Kernel.OSVERSION + "  ");
                 Console.ResetColor();
-                if (err != "OK") { Console.WriteLine("Failed to initialize GUI\n" + err); }
+                if (err != "OK") { Console.WriteLine("Failed to initialize! \n" + err); }
 
-                Console.Write("\nESC - Shutdown System\nEnter - Start System Normally\nQ - GUI Safe Mode\nC - Console (Text) Mode\n\nSelect option: ");
+                Console.Write("\nESC Key: - Shutdown System\nEnter Key - Start System Normally\nQ Key - GUI Safe Mode\nC - Console (Text) Mode\n\nSelect option: ");
                 try
                 {
                     ConsoleKeyInfo cki = Console.ReadKey();
