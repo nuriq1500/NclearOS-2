@@ -11,8 +11,8 @@ namespace NclearOS2
 {
     public class Kernel : Sys.Kernel
     {
-        public static readonly string OSVERSION = "NclearOS 2 Version Alpha 0.6";
-        public static readonly string OSNAME = "NclearOS 2";
+        public static readonly string OSVERSION = "Fexil 1.0 VBBall";
+        public static readonly string OSNAME = "Fexil 1 VBL";
         public static string PCNAME = "pc";
         public static readonly string MAINDISK = "0:\\";
         public static readonly string SYSTEMPATH = MAINDISK + "NclearOS\\";
@@ -53,13 +53,13 @@ namespace NclearOS2
             {
                 for (int i = 0; i < debugInt.Length; i++)
                 {
-                    Console.Write("Enter value for debug integer No. " + i + ": ");
+                    Console.Write("Enter value for debug integer Number: " + i + ": ");
                     debugInt[i] = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine();
                 }                                                                         //used for debugging
                 for (int i = 0; i < debugStr.Length; i++)
                 {
-                    Console.Write("Enter value for debug string No. " + i + ": ");
+                    Console.Write("Enter value for debug string Number: " + i + ": ");
                     debugStr[i] = Console.ReadLine();
                     Console.WriteLine();
                 }
@@ -68,7 +68,7 @@ namespace NclearOS2
                 Console.CursorLeft = 35;
                 Console.CursorTop = 11;
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("NclearOS");
+                Console.WriteLine("Fexil");
                 Console.CursorLeft = 0;
                 Console.CursorTop = Console.WindowHeight - 1;
                 TextMode.Run();
@@ -139,9 +139,9 @@ namespace NclearOS2
             Thread.Sleep(500);
             Console.WriteLine();
             Console.WriteLine();
-            Console.CursorLeft = (Console.WindowWidth - "Press any key to restart computer ".Length) / 2;
+            Console.CursorLeft = (Console.WindowWidth - "Press any key to restart computer . . . ".Length) / 2;
             Sys.KeyboardManager.TryReadKey(out _);
-            Console.Write("Press any key to restart computer ");
+            Console.Write("Press any key to restart computer . . . ");
             Console.ReadKey(true);
             Sys.Power.Reboot();
             ACPI.Reboot();
